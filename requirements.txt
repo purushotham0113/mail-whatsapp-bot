@@ -1,3 +1,5 @@
-openai
-twilio
+imaplib2
+email
 python-dotenv
+google-generativeai
+twilio
