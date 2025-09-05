@@ -39,11 +39,12 @@ def summarize_with_gemini(text: str) -> str:
     """Summarize text using Gemini Pro"""
     try:
         model = genai.GenerativeModel("gemini-1.5-flash")
+        print("api call ")
     
         response = model.generate_content(
             f"Summarize the following email in 2-3 sentences:\n\n{text}"
         )
-
+        print("api called")
         return response.text.strip()
     except Exception as e:
         print("⚠️ Gemini summarization failed:", e)
